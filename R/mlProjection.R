@@ -23,7 +23,7 @@
 #' @param verbose Whether to display the information about the computation or not.
 #'
 #' @return A list consisting of U (principal components), S (eigenvalues) and V (loadings).
-#' The estimated matrix (estimatedMatrix) is given as t(U \%\*\% S \%\*\% t(V)).
+#' The estimated matrix (estimatedMatrix) is given as t(U * S * t(V)).
 #'
 #' @export
 mlProjection <- function(expressionMatrix, errorCovarianceMatrix, numberOfComponents = 15, maxIterations = 2000, tolerance = 1e-10, verbose = TRUE)

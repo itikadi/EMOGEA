@@ -32,7 +32,7 @@ tolerance, the algorithm stops.}
 }
 \value{
 A list consisting of U (principal components), S (eigenvalues) and V (loadings).
-The estimated matrix (estimatedMatrix) is given as t(U \%\*\% S \%\*\% t(V)).
+The estimated matrix (estimatedMatrix) is given as t(U * S * t(V)).
 }
 \description{
 Function that computes the Maximum Likelihood PCA with equal row correlated errors.
