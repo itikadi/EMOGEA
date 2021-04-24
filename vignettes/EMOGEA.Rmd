@@ -1,0 +1,51 @@
+---
+title: "EMOGEA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EMOGEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Here, we present Error Modeled Gene Expression Analysis (EMOGEA), an R package for the analysis of RNA-Seq gene expression data. EMOGEA incorporates measurement uncertainties in the analysis of differential expression and is specifically suited for transcriptomics studies in which low-count transcripts with small fold-changes lead to significant biological effects. Such transcripts include signaling mRNAs and non-coding RNAs (ncRNA) which are known to exhibit low levels of expression. The package handles missing values by associating disproportionately large uncertainties to those measurements, making it particularly useful for single cell RNA-Seq measurements. It is specifically suited for ordinal data as it implements a constrained alternating least-squares (ALS) approach that allows waves of expression profiles to be visualized against the ordinal variable. For differential expression analysis, EMOGEA has a much higher true positivity rate (TPR) and a vanishingly small false negativity rate (FNR) compared to common approaches.  
+
+# Usage
+
+```{r echo = T, eval = F}
+library(EMOGEA)
+data(yeastExample)
+
+# Get variables
+expressionData <- yeastExample$expressionData
+metaData <- yeastExample$metaData
+sampleColumn <- yeastExample$sampleColumn
+conditionColumn <- yeastExample$conditionColumn
+
+# Prepare data
+prepareDataOutput <- prepareData(
+  expressionData = expressionData,
+  metaData = metaData,
+  sampleColumn = sampleColumn,
+  conditionColumn = conditionColumn,
+  applyLogTransformation = FALSE)
+
+# ML projection
+projectionOutput <- mlProjection(
+  expressionMatrix = prepareDataOutput$expressionMatrix,
+  errorCovarianceMatrix = prepareDataOutput$errorCovarianceMatrix)
+
+# Curve resolution
+curveResOutput <- multivariateCurveResolution(
+  expressionMatrix = prepareDataOutput$expressionMatrix,
+  residualMatrix = prepareDataOutput$residualMatrix)
+
+# Curve resolution (without residual matrix)
+curveResOutput <- multivariateCurveResolution(expressionMatrix = prepareDataOutput$expressionMatrix)
+```

@@ -1,0 +1,22 @@
+Package: EMOGEA
+Type: Package
+Title: Error Modelled Gene Expression Analysis (EMOGEA) For RNA-Seq Measurements
+Version: 0.1.0
+Authors@R: c(person('Tobias', 'Karakach', email = 'karakach@dal.ca', role = c('cre', 'aut')),
+             person('Federico', 'Taverna', email = 'federico.taverna@outlook.com', role = c('aut')))
+Maintainer: Tobias K. Karakach <karakach@dal.ca>
+Description: EMOGEA incorporates measurement uncertainties in the analysis of differential expression and is specifically suited for transcriptomics studies in which low-count transcripts with small fold-changes lead to significant biological effects.
+License: MIT + file LICENSE
+Depends:
+    data.table,
+    Matrix
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/itikadi/emogeav1
+BugReports: https://github.com/itikadi/emogeav1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 7.1.1
