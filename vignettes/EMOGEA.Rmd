@@ -14,7 +14,21 @@ knitr::opts_chunk$set(
 )
 ```
 
-Here, we present Error Modeled Gene Expression Analysis (EMOGEA), an R package for the analysis of RNA-Seq gene expression data. EMOGEA incorporates measurement uncertainties in the analysis of differential expression and is specifically suited for transcriptomics studies in which low-count transcripts with small fold-changes lead to significant biological effects. Such transcripts include signaling mRNAs and non-coding RNAs (ncRNA) which are known to exhibit low levels of expression. The package handles missing values by associating disproportionately large uncertainties to those measurements, making it particularly useful for single cell RNA-Seq measurements. It is specifically suited for ordinal data as it implements a constrained alternating least-squares (ALS) approach that allows waves of expression profiles to be visualized against the ordinal variable. For differential expression analysis, EMOGEA has a much higher true positivity rate (TPR) and a vanishingly small false negativity rate (FNR) compared to common approaches.  
+Here, we present Error Modeled Gene Expression Analysis (EMOGEA), an R package for the analysis of RNA-Seq gene expression data. 
+
+EMOGEA incorporates measurement uncertainties in the analysis of differential expression and is specifically suited for transcriptomics studies in which low-count transcripts with small fold-changes lead to significant biological effects. Such transcripts include signaling mRNAs and non-coding RNAs (ncRNA) which are known to exhibit low levels of expression. 
+
+The package handles missing values by associating disproportionately large uncertainties to those measurements, making it particularly useful for single cell RNA-Seq measurements. It is specifically suited for ordinal data as it implements a constrained alternating least-squares (ALS) approach that allows waves of expression profiles to be visualized against the ordinal variable. For differential expression analysis, EMOGEA has a much higher true positivity rate (TPR) and a vanishingly small false negativity rate (FNR) compared to common approaches.
+
+# Input
+
+As input you need the two files:
+
+* Expression data: a table containing the expression data with genes as rows, samples as columns.
+* Metadata: a table containing the metadata with samples as rows, information as columns.
+
+The samples in the expression data and metadata must match.
+The metadata must contain a column which indicates the condition of each sample (*e.g.* wildtype or experimental).
 
 # Usage
 

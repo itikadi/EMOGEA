@@ -2,8 +2,7 @@
 % Please edit documentation in R/simplisma.R
 \name{simplisma}
 \alias{simplisma}
-\title{Function to obtain the initial values for P or C.
-Ref: W. Windig, J. Guilment, Anal. Chem., 63, 1425 (1991)}
+\title{Simplisma}
 \usage{
 simplisma(expressionMatrix, numberOfComponents, noiseFactor = 0.009)
 }

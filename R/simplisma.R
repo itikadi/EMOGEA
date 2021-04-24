@@ -1,3 +1,5 @@
+#' Simplisma
+#'
 #' Function to obtain the initial values for P or C.
 #' Ref: W. Windig, J. Guilment, Anal. Chem., 63, 1425 (1991)
 #'

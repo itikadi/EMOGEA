@@ -1,3 +1,5 @@
+#' Multivariate curve resolution
+#'
 #' Function to perform multivariate curve resolution by alternating total least squares.
 #'
 #' @author Tobias K. Karakach, Federico Taverna

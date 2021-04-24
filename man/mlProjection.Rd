@@ -2,7 +2,7 @@
 % Please edit documentation in R/mlProjection.R
 \name{mlProjection}
 \alias{mlProjection}
-\title{Function that computes the Maximum Likelihood PCA with equal row correlated errors.}
+\title{Maximum likelihood projection}
 \usage{
 mlProjection(
   expressionMatrix,
@@ -31,8 +31,8 @@ tolerance, the algorithm stops.}
 \item{verbose}{Whether to display the information about the computation or not.}
 }
 \value{
-A list consisting of U (principal components), S(eigenvalues) and V (loadings).
-The estimated matrix (estimatedMatrix) is given as t(U %*% S %*% t(V)).
+A list consisting of U (principal components), S (eigenvalues) and V (loadings).
+The estimated matrix (estimatedMatrix) is given as t(U \%\*\% S \%\*\% t(V)).
 }
 \description{
 Function that computes the Maximum Likelihood PCA with equal row correlated errors.

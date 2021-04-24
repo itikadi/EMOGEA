@@ -2,7 +2,7 @@
 % Please edit documentation in R/multivariateCurveResolution.R
 \name{multivariateCurveResolution}
 \alias{multivariateCurveResolution}
-\title{Function to perform multivariate curve resolution by alternating total least squares.}
+\title{Multivariate curve resolution}
 \usage{
 multivariateCurveResolution(
   expressionMatrix,

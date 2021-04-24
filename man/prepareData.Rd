@@ -2,10 +2,7 @@
 % Please edit documentation in R/prepareData.R
 \name{prepareData}
 \alias{prepareData}
-\title{This function is meant to prepare the input to curve resolution function that calculates the profiles of a
-gene expression matrix measured as a function of time. The input data is an expression matrix which must
-have a metadata with replicate information. If there are no replicates, the total least squares implementation
-of the algorithm cannot be performed.}
+\title{Prepare input data}
 \usage{
 prepareData(
   expressionData,

@@ -1,3 +1,5 @@
+#' Prepare input data
+#'
 #' This function is meant to prepare the input to curve resolution function that calculates the profiles of a
 #' gene expression matrix measured as a function of time. The input data is an expression matrix which must
 #' have a metadata with replicate information. If there are no replicates, the total least squares implementation

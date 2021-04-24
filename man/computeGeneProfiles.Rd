@@ -2,7 +2,7 @@
 % Please edit documentation in R/computeGeneProfiles.R
 \name{computeGeneProfiles}
 \alias{computeGeneProfiles}
-\title{Function that computes the gene profiles.}
+\title{Gene profiles}
 \usage{
 computeGeneProfiles(expressionMatrix, C)
 }

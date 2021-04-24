@@ -1,3 +1,5 @@
+#' Gene profiles
+#'
 #' Function that computes the gene profiles.
 #'
 #' @author Tobias K. Karakach, Federico Taverna
